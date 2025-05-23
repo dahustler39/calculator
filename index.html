@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crypto Return Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Crypto Return Calculator</h1>
+
+    <div class="card">
+      <label for="crypto">Choose your Crypto:</label>
+      <select id="crypto"></select>
+      <button id="refresh">🔄 Refresh Price</button>
+      <p id="price">Live Price: $0.00</p>
+
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" min="0" max="100000000" placeholder="e.g., 100" />
+
+      <label for="years">Holding Period (years):</label>
+      <input type="number" id="years" min="0" max="50" placeholder="e.g., 5" />
+
+      <label for="sellPrice">Expected Sell Price (USD):</label>
+      <input type="number" id="sellPrice" placeholder="e.g., 20" />
+
+      <button id="calculate">📈 Calculate</button>
+      <p id="result"></p>
+    </div>
+
+    <canvas id="priceChart"></canvas>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
